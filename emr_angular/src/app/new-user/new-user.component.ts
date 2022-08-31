@@ -11,5 +11,7 @@ export class NewUserComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  newUser() {
 
+  }
 }

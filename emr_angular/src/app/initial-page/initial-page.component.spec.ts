@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoggedAreaComponent } from './logged-area.component';
+import { InitialPageComponent } from './initial-page.component';
 
-describe('LoggedAreaComponent', () => {
-  let component: LoggedAreaComponent;
-  let fixture: ComponentFixture<LoggedAreaComponent>;
+describe('InitialPageComponent', () => {
+  let component: InitialPageComponent;
+  let fixture: ComponentFixture<InitialPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LoggedAreaComponent ]
+      declarations: [ InitialPageComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LoggedAreaComponent);
+    fixture = TestBed.createComponent(InitialPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

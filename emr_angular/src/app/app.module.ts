@@ -11,8 +11,11 @@ import { DoctorComponent } from './doctor/doctor.component';
 import { NewDoctorComponent } from './new-doctor/new-doctor.component';
 import { UserComponent } from './user/user.component';
 import { NewUserComponent } from './new-user/new-user.component';
-import { LoggedAreaComponent } from './logged-area/logged-area.component';
 import { RepositoryComponent } from './repository/repository.component';
+import { HeaderComponent } from './header/header.component';
+import { MenuComponent } from './menu/menu.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { InitialPageComponent } from './initial-page/initial-page.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +28,11 @@ import { RepositoryComponent } from './repository/repository.component';
     NewDoctorComponent,
     UserComponent,
     NewUserComponent,
-    LoggedAreaComponent,
-    RepositoryComponent
+    RepositoryComponent,
+    HeaderComponent,
+    MenuComponent,
+    DashboardComponent,
+    InitialPageComponent
   ],
   imports: [
     BrowserModule,

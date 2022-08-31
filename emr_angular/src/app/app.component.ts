@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'emr_angular';
+
+
+  isLogged() {
+
+    return true
+  }
 }
+
+

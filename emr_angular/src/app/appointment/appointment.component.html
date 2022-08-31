@@ -4,6 +4,7 @@
             <input type="text" class="form-control" placeholder="Digite a data do atendimento:"
                 aria-label="Recipient's username" aria-describedby="searchButton" id="searchAppointment">
             <button class="btn btn-primary" type="button" id="searchAppointmentButton">Buscar</button>
+            <button routerLink="../new-appointment" class="btn btn-success ml-2">Novo Atendimento</button>
         </div>
         <br>
         <table class="table table-bordered table-hover table-striped">
@@ -19,17 +20,20 @@
                     <td>Joana da Silva</td>
                     <td>502.680.680-54</td>
                     <td>3 atendimentos</td>
-                    <td class="d-flex gap-1 justify-content-center p-1">
-                        <div class="mx-1 btn btn-danger d-flex align-items-center justify-content-center">
-                            <span class="material-icons-sharp">delete</span>
-                        </div>
-                        <div class="mx-1 btn btn-success d-flex align-items-center justify-content-center">
-                            <span class="material-icons-sharp">edit</span>
-                        </div>
-                        <div class="mx-1 btn btn-primary d-flex align-items-center justify-content-center">
-                            <span class="material-icons-sharp">description</span>
-                        </div>
-                    </td>
+                    <td>Carlos Alcantara</td>
+                    <td class="p-1">
+                      <div class="d-flex gap-1 justify-content-center p-1">
+                          <div class="mx-1 btn btn-danger d-flex align-items-center justify-content-center">
+                              <span class="material-icons-sharp">delete</span>
+                          </div>
+                          <div class="mx-1 btn btn-success d-flex align-items-center justify-content-center">
+                              <span class="material-icons-sharp">edit</span>
+                          </div>
+                          <div class="mx-1 btn btn-primary d-flex align-items-center justify-content-center">
+                              <span class="material-icons-sharp">description</span>
+                          </div>
+                      </div>
+                  </td>
                 </tr>
             </tbody>
         </table>
