@@ -1,4 +1,4 @@
-import { InitialPageComponent } from './initial-page/initial-page.component';
+import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -21,7 +21,8 @@ const routes: Routes = [
   { path: "user", component: UserComponent},
   { path: "new-user", component: NewUserComponent},
   { path: "dashboard", component: DashboardComponent},
-  { path: "", component: DashboardComponent},
+  // { path: "", component: AppComponent},
+  { path: "logged/:info", component: AppComponent},
 ];
 
 @NgModule({

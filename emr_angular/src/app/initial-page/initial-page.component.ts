@@ -8,11 +8,18 @@ import { Router } from '@angular/router';
 })
 export class InitialPageComponent implements OnInit {
 
+  logged!: boolean
+
   constructor(
     private router: Router
   ) { }
 
   ngOnInit(): void {
+  }
+
+  login() {
+    this.logged = true
+    this.router.navigate(['logged',this.logged])
   }
 
 }
