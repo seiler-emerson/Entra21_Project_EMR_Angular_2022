@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SecurityService } from 'src/app/security.service';
 
 @Component({
   selector: 'app-menu',
@@ -9,7 +11,10 @@ export class MenuComponent implements OnInit {
 
   links!: Array<any>;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private security: SecurityService
+  ) { }
 
   ngOnInit(): void {
     this.links = new Array();
@@ -30,7 +35,7 @@ export class MenuComponent implements OnInit {
     )
     this.links.push(
       {
-        rota: '',
+        rota: 'patient',
         textContent: 'Cadastros',
         icon: 'people_alt',
         submenu: [
@@ -51,11 +56,19 @@ export class MenuComponent implements OnInit {
     )
     this.links.push(
       {
-        rota: '',
+        rota: 'patient',
         textContent: 'Relatórios',
         icon: 'description'
       }
     )
+  }
+
+  isAuthenticated(): boolean {
+    if(this.security.authenticated) {
+      return true;
+    } else {
+      return false
+    }
   }
 
 }

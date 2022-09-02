@@ -7,7 +7,24 @@
   
     <div class="sidebar">
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+        <ul *ngIf="!isAuthenticated()" class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+          <li class="nav-item">
+            <a routerLink="dashboard" class="nav-link text-light d-flex">
+              <span class="material-icons-sharp">account_circle</span>
+              <p class="mx-2 ">Login</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="appointments" class="nav-link text-light d-flex">
+              <span class="material-icons-sharp">person_add_alt</span>
+              <p class="mx-2 ">Cadastrar</p>
+            </a>
+          </li>
+        </ul>
+
+        <ul *ngIf="isAuthenticated()" class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li *ngFor="let link of links" class="nav-item">
             <a [routerLink]="link.rota" class="nav-link text-light d-flex">
               <span class="material-icons-sharp">{{link.icon}}</span>

@@ -10,17 +10,20 @@ import { NewUserComponent } from './crud/new-user/new-user.component';
 import { PatientComponent } from './crud/patient/patient.component';
 import { UserComponent } from './crud/user/user.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
+import { SecurityService } from './security.service';
 
 const routes: Routes = [
-  { path: "appointments", component: AppointmentComponent},
-  { path: "new-appointment", component: NewAppointmentComponent},
-  { path: "patient", component: PatientComponent},
-  { path: "new-patient", component: NewPatientComponent},
-  { path: "doctor", component: DoctorComponent},
-  { path: "new-doctor", component: NewDoctorComponent},
-  { path: "user", component: UserComponent},
-  { path: "new-user", component: NewUserComponent},
-  { path: "dashboard", component: DashboardComponent},
+  { path: "appointments", component: AppointmentComponent, canActivate: [SecurityService]},
+  { path: "new-appointment", component: NewAppointmentComponent, canActivate: [SecurityService]},
+  { path: "patient", component: PatientComponent, canActivate: [SecurityService]},
+  { path: "new-patient", component: NewPatientComponent, canActivate: [SecurityService]},
+  { path: "doctor", component: DoctorComponent, canActivate: [SecurityService]},
+  { path: "new-doctor", component: NewDoctorComponent, canActivate: [SecurityService]},
+  { path: "user", component: UserComponent, canActivate: [SecurityService]},
+  { path: "new-user", component: NewUserComponent, canActivate: [SecurityService]},
+  { path: "dashboard", component: DashboardComponent, canActivate: [SecurityService]},
+  { path: "", component: LoginComponent},
 ];
 
 @NgModule({
