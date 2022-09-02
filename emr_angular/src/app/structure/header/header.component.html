@@ -9,7 +9,7 @@
     </ul>
   
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item dropdown">
+      <li *ngIf="isAuthenticated()" class="nav-item dropdown">
         <button class="btn btn-danger" (click)="exit()">
           Sair
           <i class="fas fa-times"></i>

@@ -21,4 +21,12 @@ export class HeaderComponent implements OnInit {
     this.security.authenticated = false
     this.router.navigateByUrl("")
   }
+
+  isAuthenticated(): boolean {
+    if(this.security.authenticated) {
+      return true;
+    } else {
+      return false
+    }
+  }
 }
