@@ -172,5 +172,4 @@ export class PatientComponent implements OnInit {
   deletePatient(index: number) {
     this.patients.splice(index,1)
   }
-
 }

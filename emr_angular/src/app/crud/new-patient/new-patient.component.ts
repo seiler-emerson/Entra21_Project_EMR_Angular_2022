@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-new-patient',
@@ -11,7 +11,6 @@ export class NewPatientComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   newPatient() {
     (<HTMLInputElement>document.getElementById('formNewPatient')).addEventListener('submit', (event) => {
       event.preventDefault()
@@ -63,5 +62,3 @@ export class NewPatientComponent implements OnInit {
     }
   }
 }
-
-

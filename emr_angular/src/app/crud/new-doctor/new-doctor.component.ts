@@ -11,7 +11,6 @@ export class NewDoctorComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   newDoctor() {
     (<HTMLInputElement>document.getElementById('formNewDoctor')).addEventListener('submit', (event) => {
       event.preventDefault()

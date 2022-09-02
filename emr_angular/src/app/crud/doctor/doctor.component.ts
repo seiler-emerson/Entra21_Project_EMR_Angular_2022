@@ -69,5 +69,4 @@ export class DoctorComponent implements OnInit {
   deleteDoctor(index: number) {
     this.doctors.splice(index,1)
   }
-
 }
