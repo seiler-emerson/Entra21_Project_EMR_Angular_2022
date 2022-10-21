@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SecurityService } from './security.service';
+import { SecurityService } from './services/security/security.service';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +7,13 @@ import { SecurityService } from './security.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
   title = 'emr_angular';
 
+  
+  
   constructor(
     public security: SecurityService
-  ) {
+    ) {
+    }
   }
-}
