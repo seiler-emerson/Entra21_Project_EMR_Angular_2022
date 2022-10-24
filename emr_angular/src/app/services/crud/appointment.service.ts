@@ -13,7 +13,7 @@ export class AppointmentService {
     appointmentList!: Array<any>;
     appointment!: any;
   
-    apiUrl: string = 'https://entra21-project-emr.herokuapp.com/appointment';
+    apiUrl: string = 'http://localhost:8080/appointment';
   
     constructor(
       private http: HttpClient
