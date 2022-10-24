@@ -15,7 +15,7 @@ export class UserService {
   userList!: Array<any>;
   user!: any;
 
-  apiUrl: string = 'hhttps://emr-entra21.herokuapp.com/user';
+  apiUrl: string = 'https://emr-entra21.herokuapp.com/user';
 
   constructor(
     private http: HttpClient
