@@ -14,10 +14,9 @@ import { SystemService } from 'src/app/services/system.service';
 export class AppointmentComponent implements OnInit {
   
   localAppointmentList: Array<any> = [];
-  appointmentList!: Array<any>;       // OS DADOS VINDO DA API SÃO CARREGADOS AQUI 
+  appointmenttList!: Array<any>;       // OS DADOS VINDO DA API SÃO CARREGADOS AQUI 
   appointmentIdSelected!: number;
   prefix!: string;
-  patientList!: Array<any>
 
   constructor(
     public appointmentService: AppointmentService,
@@ -30,13 +29,11 @@ export class AppointmentComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
-      this.patientList = this.patientService.patientList
-      this.appointmentList = this.appointmentService.appointmentList
-      this.listAllAppointment();
+      this.listAllAppointmentResume();
     }, 1000);
     this.sendTitle();
     // this.listAppointmentTable()
-    
+
   }
 
   listAllAppointmentResume(): void {
@@ -210,5 +207,6 @@ export class AppointmentComponent implements OnInit {
       return false;
     }
   }
+
 
 }
